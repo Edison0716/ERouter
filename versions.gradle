@@ -1,0 +1,6 @@
+buildscript {
+    ext{
+        googleAutoService = '1.0-rc2'
+        javaPoet = "1.9.0"
+    }
+}

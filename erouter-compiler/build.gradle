@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':erouter-annotation')
+    api "com.google.auto.service:auto-service:$googleAutoService"
+    annotationProcessor "com.google.auto.service:auto-service:$googleAutoService"
+    // out put java file
+    api "com.squareup:javapoet:$javaPoet"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+sourceCompatibility = "7"
+targetCompatibility = "7"

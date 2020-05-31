@@ -1,2 +1,7 @@
+include ':erouter'
+include ':module_sample_a'
+include ':module_base'
+include ':erouter-annotation'
 rootProject.name='ERouter'
 include ':app'
+include ':erouter-compiler'
