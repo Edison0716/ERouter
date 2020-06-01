@@ -9,7 +9,6 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeSpec;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +22,7 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 
-import static com.junlong0716.erouter.complier.Constants.CLAZZ_THIS;
-import static com.junlong0716.erouter.complier.Constants.SIMPLE_NAME_SUFFIX_OF_QUERY_BINDING;
+import static com.junlong0716.erouter.complier.Constants.CLAZZ_ROUTER_PATH;
 
 /**
  * @author EdisonLi
@@ -107,7 +105,7 @@ public class QueryCompiler extends BaseCompiler {
         /*
            Bundle bundle = data.getBundle(XXX)
          */
-        methodBuilder.addStatement("$T extraBundle = extra.getBundle($T.EXTRAS_BUNDLE)", bundleClazzName, ClassName.bestGuess(CLAZZ_THIS));
+        methodBuilder.addStatement("$T extraBundle = extra.getBundle($T.EXTRAS_BUNDLE)", bundleClazzName, ClassName.bestGuess(CLAZZ_ROUTER_PATH));
 
         for (Element queryField : queryFields) {
             generateQueryData(methodBuilder, queryField);
@@ -161,7 +159,7 @@ public class QueryCompiler extends BaseCompiler {
                         generateGetKeyByType2(key, paramTarget, queryField, mTypeUtils.typeExchange(queryField)) + ";\n" +
                         "}else {\n" +
                         " // do nothing...\n" +
-                        "}"
+                        "}\n"
                 , key
                 , key
         );

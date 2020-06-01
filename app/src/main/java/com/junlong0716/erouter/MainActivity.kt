@@ -1,25 +1,27 @@
 package com.junlong0716.erouter
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import com.example.erouter.annotation.Query
-import com.example.module.sample.a.Test
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * @author EdisonLi
+ * @version 1.0
+ * @since 2020-05-31
+ */
 class MainActivity : AppCompatActivity() {
-
-    @JvmField
-    @Query(key = "extra_name")
-    var name: String? = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
 
-        val mainActivity = `MainActivity$$QueryBinding`()
-        mainActivity.bindExtras(this, intent.extras)
-
-        val test = Test()
-        Toast.makeText(this, test.name, Toast.LENGTH_SHORT).show()
+    fun turn(view: View) {
+        val intent = Intent()
+        intent.setClass(this, MainActivity2::class.java)
+        val bundle = Bundle()
+        bundle.putString("extra_name", "ROUTER_TEST")
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }
