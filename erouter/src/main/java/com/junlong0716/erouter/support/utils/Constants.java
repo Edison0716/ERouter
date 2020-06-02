@@ -1,4 +1,4 @@
-package com.junlong0716.erouter.support;
+package com.junlong0716.erouter.support.utils;
 
 /**
  * @author EdisonLi

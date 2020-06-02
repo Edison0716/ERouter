@@ -40,7 +40,7 @@ public class Constants {
     protected static final String FUNCTION_QUERY_BIND = "bindExtras";
     protected static final String FUNCTION_QUERY_PARAMETER_NAME_TARGET = "target";
     protected static final String FUNCTION_QUERY_PARAMETER_NAME_EXTRA = "extra";
-    protected static final String CLAZZ_ROUTER_PATH = "com.junlong0716.erouter.support.Constants";
+    protected static final String CLAZZ_ROUTER_PATH = "com.junlong0716.erouter.support.utils.Constants";
     static final String SIMPLE_NAME_INTERFACE_QUERY_BINDING = "IQueryBinding";
     private static final String SIMPLE_NAME_SUB_SEPARATOR = "$$";
     protected static final String SIMPLE_NAME_SUFFIX_OF_QUERY_BINDING = SIMPLE_NAME_SUB_SEPARATOR + "QueryBinding";
