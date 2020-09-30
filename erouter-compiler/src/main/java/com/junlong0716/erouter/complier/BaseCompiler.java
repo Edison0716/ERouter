@@ -41,7 +41,6 @@ public abstract class BaseCompiler extends AbstractProcessor {
 
     }
 
-
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         return Collections.singleton(Query.class.getCanonicalName());
